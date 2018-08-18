@@ -1,5 +1,14 @@
 version: 0.0
 os: linux
 files:
-- source: /
-  destination: /home/release
+- source: src/
+  destination: /var/www/html/
+hooks:
+  BeforeInstall:
+    - Location: scripts/install.sh
+      timeout: 300
+      runas: root
+    - Location: scripts.httpd_start.sh
+      timeout: 300
+      runas: root
+
