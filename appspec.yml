@@ -1,5 +1,5 @@
 version: 0.0
 os: linux
 files:
-- source: src/
-  destination: /var/www/html/
+- source: build/libs/websample.war
+  destination: /usr/local/src/apache-tomcat-8.5.32/webapps
