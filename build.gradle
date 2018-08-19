@@ -27,6 +27,13 @@ repositories {
 war {
 	enabled = true
 	archiveName 'websample.war'
+
+}
+
+task warcopy (type: Copy) {
+	from 'build/libs/websample.war'
+	into 'war'
+	include '**/*.war'
 }
 
 dependencies {
